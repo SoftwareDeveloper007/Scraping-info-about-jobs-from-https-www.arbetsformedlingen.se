@@ -77,8 +77,14 @@ def _parse_company_xml_string(xml_string):
         listing_id = ""
         logo_url = ""
 
-    id = (listing_xml.find('arbetsplatsnamn').text).encode('utf-8')
-    title = listing_xml.find('arbetsplatsnamn').text
+    try:
+        id = (listing_xml.find('arbetsplatsnamn').text).encode('utf-8')
+    except:
+        id = ''
+    try:
+        title = listing_xml.find('arbetsplatsnamn').text
+    except:
+        title = ''
     company = {
         'source_id': id,
         'title': title,
@@ -90,8 +96,14 @@ def _parse_company_xml_string(xml_string):
 def _parse_profession_xml_string(xml_string):
     xml_root = ET.fromstring(xml_string.encode('utf-8'))
     listing_xml = xml_root.find('annons')
-    id = listing_xml.find('yrkesid').text
-    title = listing_xml.find('yrkesbenamning').text
+    try:
+        id = listing_xml.find('yrkesid').text
+    except:
+        id = ""
+    try:
+        title = listing_xml.find('yrkesbenamning').text
+    except:
+        title
     profession = {
         'source_id': id,
         'title': title,

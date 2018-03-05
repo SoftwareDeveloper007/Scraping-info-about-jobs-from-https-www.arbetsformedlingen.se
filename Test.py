@@ -31,21 +31,24 @@ API_ROOT_URL = 'http://api.arbetsformedlingen.se/platsannons/'
 # for listing in listings:
 #     print listing
 
-def _request_listings(page=1, lanid=1):
-  params = {
-      'lanid': lanid,
-      'sida': page,
-  }
-  headers = {
-      'Accept': 'application/xml',
-      'Accept-Language': 'en-US',
-  }
-  req = requests.get(API_URL, params = params, headers = headers)
-  print(req.text)
-  return req.text
+# def _request_listings(page=1, lanid=1):
+#   params = {
+#       'lanid': lanid,
+#       'sida': page,
+#   }
+#   headers = {
+#       'Accept': 'application/xml',
+#       'Accept-Language': 'en-US',
+#   }
+#   req = requests.get(API_URL, params = params, headers = headers)
+#   print(req.text)
+#   return req.text
+#
+# # _request_listings(6,10)
+#
+# listings = arbetsformedlingen.get_listings(page=24, lanid=10)
+# for listing in listings:
+#     print listing
 
-# _request_listings(6,10)
-
-listings = arbetsformedlingen.get_listings(page=24, lanid=10)
-for listing in listings:
-    print listing
+a = range(5, 0, -1)
+print(a)
