@@ -1,0 +1,7 @@
+[3:48:20 PM] Marcus Svensson: Im in need to scrape info from a job post bank in sweden:
+
+https://www.arbetsformedlingen.se/Globalmeny/Om-webbplatsen/Oppna-data.html
+
+
+They have some API where you can get all the info about the job thats avilbie
+[3:48:35 PM] Wesche Dereck: Just a moment.
